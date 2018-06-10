@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(nvml C)
+set(CMAKE_C_STANDARD 11)
+include_directories(.)
+add_definitions(-DNVML_VERSION=375.26)
+add_library(nvidia-ml-fixed SHARED nvml fix.c nvml.h)
